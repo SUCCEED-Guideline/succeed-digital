@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A browser-local reporting checklist for studies of scaling evidence-informed health interventions.">
+  <title>SUCCEED Digital · Checklist</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="guideline.js"></script>
+  <script defer src="explanations.js"></script>
+  <script defer src="s4-template.js"></script>
+  <script defer src="s4.js"></script>
+  <script defer src="word.js"></script>
+  <script defer src="vendor/pdf-lib.min.js"></script>
+  <script defer src="pdf.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to checklist</a>
+  <header class="top"><div class="wrap masthead">
+    <a class="brand" href="#main"><span class="mark" aria-hidden="true">✓</span> SUCCEED <span>Digital</span></a>
+    <a href="#sources">Guideline &amp; sources <span aria-hidden="true">↗</span></a>
+  </div></header>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <h1>Checklist</h1>
+        <p>Review your manuscript against the 33 recommendations for reporting studies of scaling evidence-informed health interventions.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true"><i></i><i></i><div class="sheet"><b>✓</b><b>✓</b><b>✓</b></div></div>
+    </div>
+  </section>
+  <main class="wrap" id="main" tabindex="-1">
+    <div class="toolbar">
+      <label for="title">Manuscript title <span>(optional)</span><input id="title" maxlength="500" placeholder="Enter your manuscript title"></label>
+      <div class="actions" aria-label="Checklist files">
+        <button id="pdf" disabled aria-describedby="download-status">Download PDF</button>
+        <button id="word" class="primary" disabled aria-describedby="download-status">Download Word</button>
+      </div>
+    </div>
+    <p id="save-state">Changes are saved in this browser.</p>
+    <p id="download-status" role="status">Downloads unlock when all 33 responses are recorded. Every Not applicable response requires a justification.</p>
+    <p id="notice" role="status"></p>
+    <div class="layout">
+      <aside>
+        <section class="panel progress-panel" aria-labelledby="progress-title">
+          <h2 id="progress-title">Review progress</h2>
+          <p id="progress-count"><strong>0 / 33</strong> responses recorded</p>
+          <progress id="progress" max="33" value="0" aria-label="Responses recorded"></progress>
+          <p class="subtle">Counts recorded responses, including reporting gaps and justified exclusions. Study and reporting quality require separate assessment.</p>
+          <dl id="counts"></dl>
+        </section>
+        <nav class="panel sections" aria-label="Checklist sections">
+          <h2>Sections</h2>
+          <div id="nav"></div>
+        </nav>
+      </aside>
+      <div>
+        <div class="check-head">
+          <h2>Checklist items</h2>
+          <label class="filter" for="filter">Show <select id="filter">
+            <option value="all">All items</option>
+            <option value="open">Needs response</option>
+            <option value="gap">Reporting gaps</option>
+            <option value="conditional">Contains a condition</option>
+          </select></label>
+        </div>
+        <p class="check-help">Use Notes for any conditions that affect only part of a recommendation. Choose Not applicable for a whole item and record why.</p>
+        <div id="checklist"></div>
+        <p id="empty" hidden>No items match this view.</p>
+      </div>
+    </div>
+    <footer class="panel" id="sources">
+      <h2>Guideline &amp; sources</h2>
+      <div id="source-text"></div>
+      <details><summary>When SUCCEED applies</summary>
+        <p>The guideline covers studies that evaluate deliberate expansion of an evidence-informed health intervention beyond its original setting, across organisations, jurisdictions, populations or delivery systems. Prior evidence or demonstrated promise and an understanding of potential harms are expected. The report describes both the intervention and its scaling strategy. The guideline applies across study designs, sample sizes and sectors.</p>
+        <p>The paper excludes single-setting implementation without broader expansion, early development or initial efficacy or feasibility testing, and effectiveness-only studies that omit evaluation of scaling processes, scalability, reach or system-level changes. See “When SUCCEED can be used” in the article for the full criteria.</p>
+      </details>
+    </footer>
+  </main>
+  <div id="print-report"></div>
+  <noscript><p class="wrap">Enable JavaScript to use the checklist.</p></noscript>
+</body>
+</html>
